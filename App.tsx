@@ -11,15 +11,20 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import { Text } from 'react-native';
+import { H1, Header, TamaguiProvider } from 'tamagui'
+import { config } from './tamagui.config.ts'
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
+    <TamaguiProvider config={config} defaultTheme={"light"}>
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <AppContent />
     </SafeAreaProvider>
+    </TamaguiProvider>
   );
 }
 
@@ -28,10 +33,10 @@ function AppContent() {
 
   return (
     <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
+      <H1 >
+        Baby watch me!
+      </H1>
+
     </View>
   );
 }
