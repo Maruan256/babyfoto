@@ -5,15 +5,23 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "ios:ipad": "react-native run-ios --simulator \"iPad Pro 11-inch (M4)\"",
+    "ios:choose": "react-native run-ios --list-devices",
+    "ios:device": "react-native run-ios --device",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/slider": "^5.2.0",
     "@react-native/new-app-screen": "0.84.1",
+    "@tamagui/config": "1.144.4",
+    "@tamagui/core": "1.144.4",
     "react": "19.2.3",
     "react-native": "0.84.1",
-    "react-native-safe-area-context": "^5.5.2"
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-vision-camera": "^4.7.3",
+    "react-native-worklets-core": "^1.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

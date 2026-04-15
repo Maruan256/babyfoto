@@ -1,16 +1,6 @@
 import { defaultConfig } from '@tamagui/config/v5'
-import { createTamagui } from 'tamagui'
+import { createTamagui } from '@tamagui/core'
 
 export const config = createTamagui({
-  ...defaultConfig,
-  media: {
-    ...defaultConfig.media,
-    // add your own media queries here, if wanted
-  },
+  ...(defaultConfig as any),
 })
-
-type OurConfig = typeof config
-
-declare module 'tamagui' {
-  interface TamaguiCustomConfig extends OurConfig {}
-}
